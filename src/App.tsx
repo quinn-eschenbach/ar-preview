@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 
 import QRCode from "react-qr-code";
@@ -66,13 +66,13 @@ function Model() {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
-  useFrame((state, delta) => (ref.current.rotation.y += delta));
+  useFrame((_, delta) => (ref.current.rotation.y += delta));
 
   useEffect(() => {
     if (ref.current) {
       ref.current.scale.set(3, 3, 3);
     }
-  }, [ref.current]);
+  }, []);
 
   return (
     <group position={[0, -3, 0]} ref={ref}>
