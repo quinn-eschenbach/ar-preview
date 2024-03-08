@@ -62,7 +62,7 @@ function App() {
 export default App;
 
 function Model() {
-  const gltf = useGLTF("/model3.glb"); //useLoader(GLTFLoader, "/Cuore_dress.drc.glb");
+  const gltf = useGLTF("/Inferno_dress.glb"); //useLoader(GLTFLoader, "/Cuore_dress.drc.glb");
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
